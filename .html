@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Swaps Kenya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Teacher Swaps Kenya</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('register')">Register</a></li>
+                <li><a href="#" onclick="showPage('login')">Login</a></li>
+                <li><a href="#" onclick="showPage('swaps')">View Swaps</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <div id="home" class="page">
+            <h2>Connect with Other Teachers</h2>
+            <p>This platform allows teachers to find swap opportunities across Kenya. Sign up to get started!</p>
+        </div>
+        <div id="register" class="page" style="display:none;">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <div id="login" class="page" style="display:none;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="swaps" class="page" style="display:none;">
+            <h2>Swap Listings</h2>
+            <form id="swapForm">
+                <label for="teacherName">Teacher's Name:</label>
+                <input type="text" id="teacherName" required>
+                <label for="county">County:</label>
+                <select id="county" required>
+                    <option value="">Select County</option>
+                    <option value="Mombasa">Mombasa</option>
+                    <option value="Kwale">Kwale</option>
+                    <option value="Kilifi">Kilifi</option>
+                    <option value="Tana River">Tana River</option>
+                    <option value="Lamu">Lamu</option>
+                    <option value="Taita/Taveta">Taita/Taveta</option>
+                    <option value="Garissa">Garissa</option>
+                    <option value="Wajir">Wajir</option>
+                    <option value="Mandera">Mandera</option>
+                    <option value="Marsabit">Marsabit</option>
+                    <option value="Isiolo">Isiolo</option>
+                    <option value="Meru">Meru</option>
+                    <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+                    <option value="Embu">Embu</option>
+                    <option value="Kitui">Kitui</option>
+                    <option value="Machakos">Machakos</option>
+                    <option value="Makueni">Makueni</option>
+                    <option value="Nyandarua">Nyandarua</option>
+                    <option value="Nyeri">Nyeri</option>
+                    <option value="Kirinyaga">Kirinyaga</option>
+                    <option value="Murang'a">Murang'a</option>
+                    <option value="Kiambu">Kiambu</option>
+                    <option value="Turkana">Turkana</option>
+                    <option value="West Pokot">West Pokot</option>
+                    <option value="Samburu">Samburu</option>
+                    <option value="Trans Nzoia">Trans Nzoia</option>
+                    <option value="Uasin Gishu">Uasin Gishu</option>
+                    <option value="Elgeyo/Marakwet">Elgeyo/Marakwet</option>
+                    <option value="Nandi">Nandi</option>
+                    <option value="Baringo">Baringo</option>
+                    <option value="Laikipia">Laikipia</option>
+                    <option value="Nakuru">Nakuru</option>
+                    <option value="Narok">Narok</option>
+                    <option value="Kajiado">Kajiado</option>
+                    <option value="Kericho">Kericho</option>
+                    <option value="Bomet">Bomet</option>
+                    <option value="Kakamega">Kakamega</option>
+                    <option value="Vihiga">Vihiga</option>
+                    <option value="Bungoma">Bungoma</option>
+                    <option value="Busia">Busia</option>
+                    <option value="Siaya">Siaya</option>
+                    <option value="Kisumu">Kisumu</option>
+                    <option value="Homa Bay">Homa Bay</option>
+                    <option value="Migori">Migori</option>
+                    <option value="Kisii">Kisii</option>
+                    <option value="Nyamira">Nyamira</option>
+                    <option value="Nairobi City">Nairobi City</option>
+                </select>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+                <label for="subjectCombination">Subject Combination:</label>
+                <input type="text" id="subjectCombination" required>
+                <label for="swapCounty">Swap County To:</label>
+                <select id="swapCounty" required>
+                    <option value="">Select Swap County</option>
+                    <option value="Mombasa">Mombasa</option>
+                    <option value="Kwale">Kwale</option>
+                    <option value="Kilifi">Kilifi</option>
+                    <option value="Tana River">Tana River</option>
+                    <option value="Lamu">Lamu</option>
+                    <option value="Taita/Taveta">Taita/Taveta</option>
+                    <option value="Garissa">Garissa</option>
+                    <option value="Wajir">Wajir</option>
+                    <option value="Mandera">Mandera</option>
+                    <option value="Marsabit">Marsabit</option>
+                    <option value="Isiolo">Isiolo</option>
+                    <option value="Meru">Meru</option>
+                    <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+                    <option value="Embu">Embu</option>
+                    <option value="Kitui">Kitui</option>
+                    <option value="Machakos">Machakos</option>
+                    <option value="Makueni">Makueni</option>
+                    <option value="Nyandarua">Nyandarua</option>
+                    <option value="Nyeri">Nyeri</option>
+                    <option value="Kirinyaga">Kirinyaga</option>
+                    <option value="Murang'a">Murang'a</option>
+                    <option value="Kiambu">Kiambu</option>
+                    <option value="Turkana">Turkana</option>
+                    <option value="West Pokot">West Pokot</option>
+                    <option value="Samburu">Samburu</option>
+                    <option value="Trans Nzoia">Trans Nzoia</option>
+                    <option value="Uasin Gishu">Uasin Gishu</option>
+                    <option value="Elgeyo/Marakwet">Elgeyo/Marakwet</option>
+                    <option value="Nandi">Nandi</option>
+                    <option value="Baringo">Baringo</option>
+                    <option value="Laikipia">Laikipia</option>
+                    <option value="Nakuru">Nakuru</option>
+                    <option value="Narok">Narok</option>
+                    <option value="Kajiado">Kajiado</option>
+                    <option value="Kericho">Kericho</option>
+                    <option value="Bomet">Bomet</option>
+                    <option value="Kakamega">Kakamega</option>
+                    <option value="Vihiga">Vihiga</option>
+                    <option value="Bungoma">Bungoma</option>
+                    <option value="Busia">Busia</option>
+                    <option value="Siaya">Siaya</option>
+                    <option value="Kisumu">Kisumu</option>
+                    <option value="Homa Bay">Homa Bay</option>
+                    <option value="Migori">Migori</option>
+                    <option value="Kisii">Kisii</option>
+                    <option value="Nyamira">Nyamira</option>
+                    <option value="Nairobi City">Nairobi City</option>
+                </select>
+
+                <label for="category">Category:</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Primary School">Primary School Swaps</option>
+                    <option value="Junior Secondary">Junior Secondary Swaps</option>
+                    <option value="Senior Secondary">Senior Secondary Swaps</option>
+                </select>
+
+                <label for="hardship">Hardship:</label>
+                <select id="hardship" required>
+                    <option value="Without Hardship">Without Hardship</option>
+                    <option value="With Hardship">With Hardship</option>
+                </select>
+
+                <button type="submit">Add Swap</button>
+            </form>
+
+            <h3>Filter Swaps</h3>
+            <label for="filterCategory">Category:</label>
+            <select id="filterCategory">
+                <option value="">All</option>
+                <option value="Primary School">Primary School Swaps</option>
+                <option value="Junior Secondary">Junior Secondary Swaps</option>
+                <option value="Senior Secondary">Senior Secondary Swaps</option>
+            </select>
+
+            <label for="filterSwapCounty">Swap County To:</label>
+            <select id="filterSwapCounty">
+                <option value="">All</option>
+                <option value="Mombasa">Mombasa</option>
+                <option value="Kwale">Kwale</option>
+                <option value="Kilifi">Kilifi</option>
+                <option value="Tana River">Tana River</option>
+                <option value="Lamu">Lamu</option>
+                <option value="Taita/Taveta">Taita/Taveta</option>
+                <option value="Garissa">Garissa</option>
+                <option value="Wajir">Wajir</option>
+                <option value="Mandera">Mandera</option>
+                <option value="Marsabit">Marsabit</option>
+                <option value="Isiolo">Isiolo</option>
+                <option value="Meru">Meru</option>
+                <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+                <option value="Embu">Embu</option>
+                <option value="Kitui">Kitui</option>
+                <option value="Machakos">Machakos</option>
+                <option value="Makueni">Makueni</option>
+                <option value="Nyandarua">Nyandarua</option>
+                <option value="Nyeri">Nyeri</option>
+                <option value="Kirinyaga">Kirinyaga</option>
+                <option value="Murang'a">Murang'a</option>
+                <option value="Kiambu">Kiambu</option>
+                <option value="Turkana">Turkana</option>
+                <option value="West Pokot">West Pokot</option>
+                <option value="Samburu">Samburu</option>
+                <option value="Trans Nzoia">Trans Nzoia</option>
+                <option value="Uasin Gishu">Uasin Gishu</option>
+                <option value="Elgeyo/Marakwet">Elgeyo/Marakwet</option>
+                <option value="Nandi">Nandi</option>
+                <option value="Baringo">Baringo</option>
+                <option value="Laikipia">Laikipia</option>
+                <option value="Nakuru">Nakuru</option>
+                <option value="Narok">Narok</option>
+                <option value="Kajiado">Kajiado</option>
+                <option value="Kericho">Kericho</option>
+                <option value="Bomet">Bomet</option>
+                <option value="Kakamega">Kakamega</option>
+                <option value="Vihiga">Vihiga</option>
+                <option value="Bungoma">Bungoma</option>
+                <option value="Busia">Busia</option>
+                <option value="Siaya">Siaya</option>
+                <option value="Kisumu">Kisumu</option>
+                <option value="Homa Bay">Homa Bay</option>
+                <option value="Migori">Migori</option>
+                <option value="Kisii">Kisii</option>
+                <option value="Nyamira">Nyamira</option>
+                <option value="Nairobi City">Nairobi City</option>
+            </select>
+            
+            <button onclick="filterSwaps()">Filter Swaps</button>
+
+            <h3>Registered Swaps</h3>
+            <table id="swapTable">
+                <thead>
+                    <tr>
+                        <th>Teacher's Name</th>
+                        <th>County</th>
+                        <th>Phone Number</th>
+                        <th>Subject Combination</th>
+                        <th>Swap County To</th>
+                        <th>Category</th>
+                        <th>Hardship</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Swap entries will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="contact" class="page" style="display:none;">
+            <h2>Contact Us</h2>
+            <p>Email: support@teacherswapskenya.com</p>
+            <p>Phone: +254 700 000 000</p>
+            <p>Phone: +254 792 755 676</p>
+            <p>Phone: +254 795 854 571</p>
+            <p>Facebook: <a href="#">Link</a></p>
+            <p>YouTube: <a href="#">Link</a></p>
+            <p>Telegram: <a href="#">Link</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Teacher Swaps Kenya</p>
+    </footer>
+
+    <script>
+        function showPage(page) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.style.display = 'none');
+            document.getElementById(page).style.display = 'block';
+        }
+
+        function showPaymentPrompt() {
+            const paymentMessage = "Please pay Ksh 100 to M-Pesa number 0792755676 to access the available swaps and send requests. Click OK after making the payment.";
+            const userConfirmed = confirm(paymentMessage);
+            if (userConfirmed) {
+                // Show the swaps page after payment confirmation
+                showPage('swaps');
+            } else {
+                alert("You need to make the payment to access the swaps.");
+            }
+        }
+
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Registration successful!'); // Placeholder for registration
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Login successful!'); // Placeholder for login
+            showPage('swaps'); // Redirect to view swaps
+            showPaymentPrompt(); // Prompt payment after login
+        });
+
+        document.getElementById('swapForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get input values
+            const teacherName = document.getElementById('teacherName').value;
+            const county = document.getElementById('county').value;
+            const phone = document.getElementById('phone').value;
+            const subjectCombination = document.getElementById('subjectCombination').value;
+            const swapCounty = document.getElementById('swapCounty').value;
+            const category = document.getElementById('category').value;
+            const hardship = document.getElementById('hardship').value;
+
+            // Create a new row for the swap table
+            const newRow = `<tr>
+                <td>${teacherName}</td>
+                <td>${county}</td>
+                <td>${phone}</td>
+                <td>${subjectCombination}</td>
+                <td>${swapCounty}</td>
+                <td>${category}</td>
+                <td>${hardship}</td>
+            </tr>`;
+
+            // Add the new row to the swap table
+            document.querySelector('#swapTable tbody').insertAdjacentHTML('beforeend', newRow);
+
+            // Clear the form
+            document.getElementById('swapForm').reset();
+        });
+
+        function filterSwaps() {
+            const categoryFilter = document.getElementById('filterCategory').value;
+            const swapCountyFilter = document.getElementById('filterSwapCounty').value;
+            const rows = document.querySelectorAll('#swapTable tbody tr');
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const category = cells[5].textContent;
+                const swapCounty = cells[4].textContent;
+
+                // Show/hide rows based on filters
+                const categoryMatch = categoryFilter ? category === categoryFilter : true;
+                const countyMatch = swapCountyFilter ? swapCounty === swapCountyFilter : true;
+
+                row.style.display = (categoryMatch && countyMatch) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
